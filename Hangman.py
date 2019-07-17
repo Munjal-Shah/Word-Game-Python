@@ -1,22 +1,12 @@
-#Hangman
-
 import random
 
-#Starting main code
-
 fileName = "words.txt"
-
 with open(fileName) as f:
   wordList = f.readlines()
 
 index = random.randint(0, len(wordList))
-
-print("word", wordList[index])
-
 string = wordList[index]
-
 word = list(string[0:-1])
-
 List = []
 
 for letter in word:
@@ -26,7 +16,6 @@ for letter in word:
         List.append("_")
 
 print(List)
-
 count = 6
 
 while count > 0 and "_" in List:
@@ -55,28 +44,3 @@ while count > 0 and "_" in List:
         break;
 
     print(List)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  
-        
-
